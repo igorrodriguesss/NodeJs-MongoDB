@@ -12,4 +12,7 @@ router.get('/:id', ProductController.getProduct)
 
 router.post('/remove/:id', ProductController.removeProduct)
 
+router.get('/edit/:id', ProductController.editProduct)
+router.post('/edit', ProductController.editProductPost)
+
 module.exports = router
