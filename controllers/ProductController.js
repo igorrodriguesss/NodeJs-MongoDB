@@ -34,4 +34,15 @@ module.exports = class ToughController {
 
     res.render('products/product', {product})
   }
+
+  static async removeProduct(req, res) {
+    
+    const id = req.params.id
+
+    const product = await Product.removeProductById(id)
+
+    res.redirect('/products')
+  }
+
+
 }

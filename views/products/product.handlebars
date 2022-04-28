@@ -2,8 +2,14 @@
     <a href="/products">Voltar</a>
     <br>
     <br>
+    
     <h1>{{product.name}}</h1>
     <p>Preço: R${{product.price}}</p>
     <img src="{{product.image}}" alt="{{product.name}}">
     <p>Descrição: {{product.description}}</p>
+
+    <form method="post" action="/products/remove/{{product._id}}">
+    <input type="submit" value="Excluir" class="btn">
+    </form>
+
 </div>
